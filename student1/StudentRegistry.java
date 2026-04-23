@@ -70,7 +70,7 @@ public class StudentRegistry {
 
                 size--;
 
-                System.out.println("Mahasiswa berhasil dihapus");
+                System.out.println("Data berhasil dihapus");
                 return;
             }
         }
