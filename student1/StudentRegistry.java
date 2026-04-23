@@ -70,11 +70,11 @@ public class StudentRegistry {
 
                 size--;
 
-                System.out.println("Mahasiswa berhasil dihapus");
+                System.out.println("Data berhasil dihapus");
                 return;
             }
         }
 
-        System.out.println("Mahasiswa tidak ditemukan");
+        System.out.println("Data mahasiswa tidak ditemukan");
     }
 }
