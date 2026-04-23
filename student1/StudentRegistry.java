@@ -75,6 +75,6 @@ public class StudentRegistry {
             }
         }
 
-        System.out.println("Mahasiswa tidak ditemukan");
+        System.out.println("Data mahasiswa tidak ditemukan");
     }
 }
