@@ -45,7 +45,7 @@ public class StudentRegistry {
                 return;
             }
         }
-        System.out.println("Data dari main");
+        System.out.println("Data tidak ditemukan");
     }
 
     public void findByName(String name) {
