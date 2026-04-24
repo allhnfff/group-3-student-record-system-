@@ -5,7 +5,7 @@ public class EnrollmentQueueDemo {
         EnrollmentQueue queue = new EnrollmentQueue();
 
         Student s1 = new Student( "001", "syifa", "SI", 2023);
-        Student s2 = new Student( nim: "002", "Budi", "TI", 2022);
+        Student s2 = new Student(  "002", "Budi", "TI", 2022);
         Student s3 = new Student( "003", "Lani", "TI", 2025);
 
         queue.enqueue(s1);
