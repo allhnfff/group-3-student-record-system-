@@ -9,4 +9,12 @@ public class Student {
         this.nim = nim;
         this.name = name;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getNim() {
+        return nim;
+    }
 }
