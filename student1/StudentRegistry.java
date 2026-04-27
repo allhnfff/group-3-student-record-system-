@@ -55,7 +55,7 @@ public class StudentRegistry {
                 return;
             }
         }
-        System.out.println("Mahasiswa tidak ditemukan");
+        System.out.println("Data mahasiswa tidak ditemukan");
     }
 
     public void removeStudent(String nim) {
