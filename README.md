@@ -98,3 +98,6 @@ Author
 
 Group 3
 Mata Kuliah Struktur Data dan Algoritma
+
+## Pull Request Demo
+Branch feature-course-roster digunakan untuk demonstrasi workflow Git.
