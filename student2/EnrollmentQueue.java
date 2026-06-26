@@ -1,43 +1,86 @@
 package student2;
 
-import java.util.LinkedList;
+import shared.Student;
 
-public class EnrollmentQueue {
-    private LinkedList<Student> queue;
+class Node {
+    Student data;
+    Node next;
 
-    public EnrollmentQueue() {
-        queue = new LinkedList<>();
-    }
-
-    public void enqueue(Student student) {
-        queue.addLast(student);
-        System.out.println(student.getName() + " masuk antrian");
-    }
-    public void dequeue() {
-        if (queue.isEmpty()) {
-            System.out.println("Antrian kosong");
-        } else {
-            Student s = queue.removeFirst();
-            System.out.println(s.getName() + " keluar dari antrian");
-        }
-    }
-    public void peek() {
-        if (queue.isEmpty()) {
-            System.out.println("Antrian kosong");
-        } else {
-            System.out.println("Antrian terdepan: " + queue.getFirst().getName());
-        }
-    }
-    public void displayQueue() {
-        if (queue.isEmpty()) {
-            System.out.println("Antrian kosong");
-        } else {
-            System.out.println("isi antrian:");
-            for (Student s : queue) {
-                System.out.println(s.getName());
-            }
-        }
+    public Node(Student data) {
+        this.data = data;
+        this.next = null;
     }
 }
 
+public class EnrollmentQueue {
 
+    private Node front;
+    private Node rear;
+
+    public EnrollmentQueue() {
+        front = null;
+        rear = null;
+    }
+
+// Menambahkan data ke antrian
+public void enqueue(Student student) {
+
+    Node newNode = new Node(student);
+
+    if (rear == null) {
+        front = newNode;
+        rear = newNode;
+    } else {
+        rear.next = newNode;
+        rear = newNode;
+        rear.next = newNode;
+        rear = newNode;
+    }
+
+    System.out.println(student.name + " masuk ke antrian");
+}
+// Menghapus data dari antrian
+public void dequeue() {
+
+    if (front == null) {
+        System.out.println("Antrian kosong");
+        return;
+    }
+
+    System.out.println(front.data.name + " keluar dari antrian");
+
+    front = front.next;
+
+    if (front == null) {
+        rear = null;
+    }
+}
+
+// Melihat data terdepan
+public void peek() {
+
+    if (front == null) {
+        System.out.println("Antrian kosong");
+        return;
+    }
+
+    System.out.println("Data terdepan: " + front.data.name);
+}
+
+// Menampilkan seluruh antrian
+public void displayQueue() {
+    if (front == null) {
+        System.out.println("Antrian kosong");
+        return;
+    }
+
+    Node current = front;
+
+    System.out.println("Isi Antrian:");
+
+    while (current != null) {
+        System.out.println(current.data.name);
+        current = current.next;
+    }
+  }
+}
