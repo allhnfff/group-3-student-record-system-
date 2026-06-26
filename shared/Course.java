@@ -28,25 +28,4 @@ public class Course {
     public String getLecturer() {
         return lecturer;
     }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCredits(int credits) {
-        this.credits = credits;
-    }
-
-    public void setLecturer(String lecturer) {
-        this.lecturer = lecturer;
-    }
-
-    @Override
-    public String toString() {
-        return "[" + code + "] " + name + " - " + credits + " SKS, Dosen: " + lecturer;
-    }
 }
