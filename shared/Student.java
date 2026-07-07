@@ -10,11 +10,7 @@ public class Student {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getNim() { return nim; }
+    public String getName() { return name; }
 
-    public String getNim() {
-        return nim;
-    }
 }
